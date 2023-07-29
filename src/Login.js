@@ -30,12 +30,12 @@ const Login = () => {
         <form onSubmit={handleLogin}>
           <h3 className="text-center">Sign In</h3>
           <div className="mb-2">
-            <label htmlFor="email">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter Your Name"
-              type="name"
+              type="text"
               className="form-control"
             />
           </div>
