@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const Login = () => {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
   const [passwordLog, setPasswordLog] = useState("");
   const [error, setError] = useState("");
   const history = useNavigate();
@@ -14,7 +14,7 @@ const Login = () => {
 
     const loggedUser = JSON.parse(localStorage.getItem("user"));
     console.log(loggedUser);
-    if (mail === loggedUser.name && passwordLog === loggedUser.password) {
+    if (name === loggedUser.name && passwordLog === loggedUser.password) {
       localStorage.setItem("loggedIn", true);
       history("/");
       setError("");
